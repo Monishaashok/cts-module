@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: #f9f9f9;
+}
+header, nav, main, footer {
+  max-width: 900px;
+  margin: auto;
+}
+nav {
+  background-color: #004080;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+#welcomeBanner {
+  background-color: #007acc;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+.event-img {
+  border: 2px solid #004080;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.event-img.enlarged {
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+}
+form {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+}
+form input, form select, form textarea, form button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+output {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+#geoOutput {
+  margin-top: 1rem;
+  font-weight: bold;
+}

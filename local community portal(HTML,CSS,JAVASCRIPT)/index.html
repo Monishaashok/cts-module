@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Welcome Banner -->
+    <div id="welcomeBanner">
+      Welcome to the Local Community Event Portal! 
+      <span style="color: red; font-weight: bold;">Special Offer: Register now and get 10% off!</span>
+    </div>
+
+    <!-- Sections -->
+    <section id="home">
+      <h1 class="highlight">Home</h1>
+      <p>Welcome residents! Explore upcoming events and register easily.</p>
+    </section>
+
+    <section id="events">
+      <h2>Community Events Gallery</h2>
+      <table>
+        <caption>Past Community Events</caption>
+        <tr>
+          <td><img src="event1.jpg" alt="Community Picnic" title="Community Picnic" class="event-img" /></td>
+          <td><img src="event2.jpg" alt="Art Workshop" title="Art Workshop" class="event-img" /></td>
+          <td><img src="event3.jpg" alt="Music Festival" title="Music Festival" class="event-img" /></td>
+        </tr>
+        <tr>
+          <td><img src="event4.jpg" alt="Food Fair" title="Food Fair" class="event-img" /></td>
+          <td><img src="event5.jpg" alt="Charity Run" title="Charity Run" class="event-img" /></td>
+          <td><img src="event6.jpg" alt="Local Theater" title="Local Theater" class="event-img" /></td>
+        </tr>
+      </table>
+
+      <h3>Register for an Event</h3>
+      <form id="registrationForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" placeholder="Your Name" required autofocus /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required /><br />
+
+        <label for="date">Event Date:</label><br />
+        <input type="date" id="date" name="date" required /><br />
+
+        <label for="eventType">Event Type:</label><br />
+        <select id="eventType" name="eventType" required>
+          <option value="">--Select--</option>
+          <option value="picnic">Community Picnic</option>
+          <option value="workshop">Art Workshop</option>
+          <option value="music">Music Festival</option>
+        </select><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" placeholder="Additional info"></textarea><br />
+
+        <button type="submit" id="submitBtn">Register</button><br />
+
+        <output id="confirmation"></output>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Reach out via email or phone for assistance.</p>
+      <label for="phone">Phone Number:</label><br />
+      <input type="tel" id="phone" name="phone" placeholder="123-456-7890" onblur="validatePhone()" /><br />
+    </section>
+
+    <section id="videoInvite">
+      <h2>Event Promo Video</h2>
+      <video id="promoVideo" width="320" height="240" controls oncanplay="videoReady()">
+        <source src="promo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoMessage"></p>
+    </section>
+
+    <section id="preferences">
+      <h2>User Preferences</h2>
+      <button onclick="clearPreferences()">Clear Preferences</button>
+    </section>
+
+    <section id="geolocation">
+      <h2>Find Nearby Events</h2>
+      <button onclick="findNearbyEvents()">Find Nearby Events</button>
+      <p id="geoOutput"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Local City Council</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
